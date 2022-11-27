@@ -37,7 +37,6 @@ mod test {
     use super::*;
     use ark_bls12_381::{Bls12_381, Fr as BlsFr};
     use ark_groth16::Groth16;
-    use ark_serialize::{CanonicalSerialize, Compress, Validate};
     use ark_snark::SNARK;
     use ark_std::{ops::*, UniformRand};
 
