@@ -15,7 +15,7 @@ ark-snark = { git = "https://github.com/arkworks-rs/snark", default-features = f
 ark-poly = { git = "https://github.com/arkworks-rs/algebra", default-features = false }
 ark-crypto-primitives = { git = "https://github.com/arkworks-rs/crypto-primitives", default-features = false }
 ark-r1cs-std = { git = "https://github.com/arkworks-rs/r1cs-std", default-features = false }
-ark-groth16 = { git = "https://github.com/achimcc/groth16", default-features = false }
+ark-groth16 = { git = "https://github.com/achimcc/groth16", branch = "master", default-features = false }
 blake2 = { version = "0.9", default-features = false }
 rand = "0.8.5"
 
@@ -26,7 +26,6 @@ ark-ec = { git = "https://github.com/arkworks-rs/algebra" }
 ark-poly = { git = "https://github.com/arkworks-rs/algebra" }
 ark-std = { git = "https://github.com/arkworks-rs/std" }
 ark-snark = { git = "https://github.com/arkworks-rs/snark" }
-ark-groth16 = { git = "https://github.com/achimcc/groth16" }
 ark-crypto-primitives = { git = "https://github.com/arkworks-rs/crypto-primitives" }
 ark-sponge = { git = "https://github.com/arkworks-rs/sponge" }
 ark-r1cs-std = { git = "https://github.com/arkworks-rs/r1cs-std" }
