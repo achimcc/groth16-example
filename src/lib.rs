@@ -38,8 +38,8 @@ mod test {
     use ark_bls12_381::{Bls12_381, Fr as BlsFr};
     use ark_ff::Fp;
     use ark_groth16::Groth16;
-    use ark_serialize::{CanonicalDeserialize, CanonicalSerialize, Compress, Validate};
     use ark_snark::SNARK;
+    use ark_serialize::{CanonicalDeserialize, CanonicalSerialize, Compress, Validate};
     use ark_std::{io::Cursor, ops::*, UniformRand};
 
     #[test]
@@ -161,7 +161,7 @@ mod test {
     }
 
     #[test]
-    fn test_desierialize_verification() {
+    fn test_deserialize_verification() {
         let vk_serialized: Vec<u8> = vec![
             183, 29, 177, 250, 95, 65, 54, 46, 147, 2, 91, 53, 86, 215, 110, 173, 18, 37, 207, 89,
             13, 28, 219, 158, 56, 42, 31, 235, 183, 150, 61, 205, 36, 165, 30, 24, 223, 4, 171, 34,
