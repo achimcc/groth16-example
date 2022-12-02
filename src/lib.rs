@@ -1,3 +1,6 @@
+#![feature(test)]
+extern crate test;
+
 use ark_ff::Field;
 use ark_relations::{
     lc,
@@ -33,7 +36,7 @@ impl<ConstraintF: Field> ConstraintSynthesizer<ConstraintF> for MultiplyDemoCirc
 }
 
 #[cfg(test)]
-mod test {
+mod tests {
     use super::*;
     use ark_bls12_381::{Bls12_381, Fr as BlsFr};
     use ark_ff::Fp;
@@ -41,6 +44,7 @@ mod test {
     use ark_snark::SNARK;
     use ark_serialize::{CanonicalDeserialize, CanonicalSerialize, Compress, Validate};
     use ark_std::{io::Cursor, ops::*, UniformRand};
+    use test::Bencher;
 
     #[test]
     fn test_groth16_circuit_multiply() {
@@ -223,5 +227,10 @@ mod test {
         .unwrap();
 
         assert!(Groth16::<Bls12_381>::verify(&vk, &[c], &proof).unwrap());
+    }
+
+    #[bench]
+    fn bench_groth16(b: &mut Bencher) {
+        b.iter(|| test_deserialize_verification());
     }
 }
